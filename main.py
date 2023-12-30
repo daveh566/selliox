@@ -10,7 +10,7 @@ keep_alive()
 import urllib3
 urllib3.disable_warnings()
 
-bot_token = "Bot_Token"
+bot_token = "6882659978:AAExqY5B4sYmd4NLc-hLYB-CNi2-2cZ_Tp0"
 bot = telebot.TeleBot(bot_token)
 
 user_data = {}  
