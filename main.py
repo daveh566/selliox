@@ -167,14 +167,14 @@ def sellix_payment(message):
         result = pay_sellix(sellix_url, ccn, mon, year)
 
         if isinstance(result, bool) and result:
-            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Live ✔️\n⊙ Response: Success: Payment succeeded with card {ccn}")
+            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter by @XusergX\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Live ✔️\n⊙ Response: Success: Payment succeeded with card {ccn}")
         elif isinstance(result, dict) and 'error' in result:
-            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Failure: Payment failed with card {ccn}: {result['error']}")
+            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter by @XusergX\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Failure: Payment failed with card {ccn}: {result['error']}")
         else:
-            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Unexpected result with card {ccn}: {result}")
+            bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter by @XusergX\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Unexpected result with card {ccn}: {result}")
 
     except Exception as e:
-        bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Error: An unexpected error occurred for card {ccn}: {e}")
+        bot.reply_to(message, f"┏━━━━━━━⍟\n┃  Sellix Hitter by @XusergX\n┗━━━━━━━━━━━⊛\n\n⊙ CC: {ccn}|{mon}|{year}|\n⊙ Status: Dead ❌\n⊙ Response: Error: An unexpected error occurred for card {ccn}: {e}")
 
     # Clear user data after the payment attempt
     del user_data[chat_id]
