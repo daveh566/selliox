@@ -2,6 +2,7 @@ import requests
 import telebot
 import random
 import re
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from keep_alive import keep_alive
 
 keep_alive()
