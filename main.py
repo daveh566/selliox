@@ -138,7 +138,7 @@ def pay_sellix(url, ccn, mon, year):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "Welcome to the Sellix AutoCo! Please enter your Sellix invoice URL.")
+    bot.reply_to(message, "Welcome to the Sellix by @XusergX! Enter your Sellix invoice URL.")
 
 @bot.message_handler(func=lambda message: message.text.startswith('http'))
 def get_invoice_url(message):
